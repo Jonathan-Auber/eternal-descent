@@ -9,20 +9,36 @@
     padding: 0;
     font-family: poppins, sans-serif;
     font-size: 0.9rem;
+    list-style: none;
 }
 
-body {
-    background: url("/assets/img/body-bg.jpg") fixed center/cover no-repeat;
-}
-
-main {
+/* A effacer plus tard */
+.wrap {
     width: 370px;
     margin: auto;
 }
 
+/* A effacer plus tard */
+
+/* body {
+    background: url("/assets/img/body-bg.jpg") fixed center/cover no-repeat;
+} */
+
+main {
+    background: url("/assets/img/body-bg.jpg") fixed center/cover no-repeat;
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
 /* Composant mug blanc */
 article {
-    margin: 50px auto;
     width: 90%;
     height: 25vh;
     padding: 15px;
@@ -99,4 +115,37 @@ button {
 #peluche img {
     width: 100%;
     object-fit: cover;
+}
+
+/* Footer Ramy */
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    line-height: 25px;
+}
+
+#team {
+    margin-top: 30px;
+}
+
+footer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(8, 43, 8, 1), rgba(8, 43, 8, 1), rgba(0, 0, 0, 1));
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: white;
 }
