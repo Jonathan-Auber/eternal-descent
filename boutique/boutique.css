@@ -37,7 +37,7 @@ main {
     gap: 50px;
 }
 
-/* Composant mug blanc */
+/* Composant goodie */
 article {
     transform: scale(0.9);
     width: 90%;
@@ -58,12 +58,6 @@ article:hover {
     transition: 2s;
 }
 
-#mug-blanc img {
-    width: 100%;
-    object-fit: contain;
-    transform: scale(2.5);
-}
-
 figure {
     width: 40%;
 }
@@ -78,11 +72,13 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transform: scale(0.9);
 }
 
 button:hover {
     box-shadow: 0px 0px 30px #c19d53;
-    transition: .5s;
+    transform: scale(1);
+    transition: 1s;
 }
 
 .description-goodie {
@@ -93,6 +89,13 @@ button:hover {
     margin-right: 40px;
     text-align: left;
     padding: 5px;
+}
+
+/* Composant mug blanc */
+#mug-blanc img {
+    width: 100%;
+    object-fit: contain;
+    transform: scale(2.5);
 }
 
 /* Composant mug noir */
