@@ -8,15 +8,9 @@
     margin: 0;
     padding: 0;
     font-family: poppins, sans-serif;
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 
-/* A effacer */
-article {
-    margin-top: 100px;
-}
-
-/* A effacer */
 body {
     background: url("/assets/img/body-bg.jpg") fixed center/cover no-repeat;
 }
@@ -28,6 +22,7 @@ main {
 
 /* Composant mug blanc */
 article {
+    margin: 50px auto;
     width: 90%;
     height: 25vh;
     padding: 15px;
