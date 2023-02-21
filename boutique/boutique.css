@@ -1,0 +1,107 @@
+@font-face {
+    font-family: poppins;
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: poppins, sans-serif;
+    font-size: 14px;
+}
+
+/* A effacer */
+article {
+    margin-top: 100px;
+}
+
+/* A effacer */
+body {
+    background: url("/assets/img/body-bg.jpg") fixed center/cover no-repeat;
+}
+
+main {
+    width: 370px;
+    margin: auto;
+}
+
+/* Composant mug blanc */
+article {
+    width: 90%;
+    height: 25vh;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 20px #417A27;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#mug-blanc img {
+    width: 100%;
+    object-fit: contain;
+    transform: scale(2.5);
+}
+
+figure {
+    width: 40%;
+}
+
+button {
+    background-color: #417A27;
+    color: white;
+    width: 250px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.description-goodie {
+    padding: 10px;
+}
+
+.description-goodie>p {
+    margin-right: 40px;
+    text-align: left;
+    padding: 5px;
+}
+
+/* Composant mug noir */
+#mug-noir img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Composant t-shirt noir */
+#t-shirt-blanc img {
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.8);
+}
+
+/* Composant t-shirt blanc */
+#t-shirt-noir img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Composat poster métal */
+#poster-metal img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    transform: scale(0.9);
+}
+
+/* Composat peluche */
+#peluche img {
+    width: 100%;
+    object-fit: cover;
+}
