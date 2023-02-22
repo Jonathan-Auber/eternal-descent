@@ -1,11 +1,14 @@
-const menuHamburger = document.querySelector("#divSpanBurger")
-const navLinks = document.querySelector("#navbar")
+const menuHamburger = document.querySelector("#divSpanBurger");
+const navLinks = document.querySelector("#navbar");
+const topSpan = document.getElementById("topSpan");
+const middleSpan = document.getElementById("middleSpan");
+const bottomSpan = document.getElementById("bottomSpan");
  
 menuHamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('mobile_menu')
-        if (screen.width>="1470px") {
-                navLinks.classList.remove('mobile_menu')
-        }
+        navLinks.classList.toggle('mobile_menu');
+        topSpan.classList.toggle('crossSpan1');
+        middleSpan.classList.toggle('deleteSpan');
+        bottomSpan.classList.toggle('crossSpan2')
 })
 
 
