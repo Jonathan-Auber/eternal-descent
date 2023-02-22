@@ -203,3 +203,35 @@ main{
     background: url("../assets/img/main-background.jpg") fixed center/cover no-repeat;
     height: 100vh;
 }
+
+
+/* FOOTER BY RAMY */
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    line-height: 25px;
+    }
+    
+#team{
+    /* margin-left: 35%; */
+    margin-top: 30px;
+}
+    
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width:100%;
+    background: linear-gradient( rgba(0,0,0,1), rgba(8,43,8,1) , rgba(8,43,8,1) , rgba(0,0,0,1) );
+    color: white;
+}
+    
+footer a {
+    text-decoration: none;
+}
