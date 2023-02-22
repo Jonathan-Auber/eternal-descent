@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+@font-face {
+  font-family: poppins;
+  src: url(/assets/fonts/Poppins-Regular.ttf);
+}
+body {
+  font-family: poppins, sans-serif;
+  font-size: 0.9rem;
+}
+/* width téléphone 370 */
+.wrap {
+  width: 370px;
+}
+
+/************************* Flex + réglage all main**********************************/
+
+main {
+  background-image: url(/assets/img/rui-goncalves-nazgul-presentation-2.1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #c19d53;
+  gap: 25px;
+}
+p {
+  text-align: center;
+}
+
+/************************Liens réseaux sociaux ********************************/
+
+.social {
+  display: flex;
+  flex-direction: row;
+}
+figure {
+  width: 50px;
+  height: 50px;
+}
+figure img {
+  width: 0;
+  min-width: 100%;
+  height: 0;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+/*************************Carte****************************************/
+
+.map {
+  width: 300px;
+  height: 200px;
+}
+iframe {
+  width: 0;
+  min-width: 100%;
+  height: 0;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+/**************************FAQ liste déroulante**************************/
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+select {
+  width: 70%;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px rgba(66, 255, 0, 0.4);
+  color: #c19d53;
+  text-align: center;
+}
+option {
+  background: black;
+}
+
+/**************************style des réponses et placements cachés****************************/
+.answer {
+  position: relative;
+  top: 0;
+}
+.answer_date,
+.answer_access,
+.answer_online,
+.answer_coop {
+  position: absolute;
+  top: 0;
+  /*   right: 1000px; */
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px rgba(66, 255, 0, 0.4);
+  padding: 5px;
+  /*   margin-left: 20px;
+  margin-right: 20px; */
+}
+
+/* toggle answer_date */
+
+/* .adOn {
+  right: 0;
+  transition: 0.5s;
+} */
+
+/****************************footer*******************************************************/
+footer div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  line-height: 25px;
+}
+
+#team {
+  margin-top: 30px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(8, 43, 8, 1),
+    rgba(8, 43, 8, 1),
+    rgba(0, 0, 0, 1)
+  );
+  color: white;
+  font-size: 0.7rem;
+  padding-top: 25px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
