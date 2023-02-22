@@ -1,3 +1,13 @@
+// Menu Burger
+const menuHamburger = document.querySelector("#divSpanBurger")
+const navLinks = document.querySelector("#navbar")
+
+menuHamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile_menu')
+})
+
+
+// Controle du panier
 const counter = document.getElementById("count");
 const addMugBlanc = document.querySelector("#add-mug-blanc");
 const addMugNoir = document.getElementById("add-mug-noir");
@@ -7,8 +17,8 @@ const addPoster = document.getElementById("add-poster");
 const addPeluche = document.getElementById("add-peluche");
 
 
-function addToCart (goodie) {
-counter.innerHTML++;
+function addToCart(goodie) {
+    counter.innerHTML++;
 }
 
 addMugBlanc.addEventListener("click", addToCart);

@@ -153,6 +153,7 @@ main {
     justify-content: space-evenly;
     align-items: center;
     gap: 50px;
+    position: relative;
 }
 
 main h2 {
@@ -200,7 +201,7 @@ figure {
     align-items: center;
     position: absolute;
     bottom: 0;
-    transform:  translateY(60%);
+    transform: translateY(60%);
 }
 
 .addToCart:hover {
@@ -259,7 +260,62 @@ figure {
     object-fit: cover;
 }
 
-/* Footer Ramy */
+/* Travail du panier popup */
+#popup-panier {
+    width: 80%;
+    border: solid white 4px;
+    color: white;
+    background-color: #000000;
+    box-shadow: 0px 0px 20px #082B08;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#popup-panier p {
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+    color: #C19D53;
+    font-size: 1.2rem;
+}
+
+#popup-panier p:nth-child(3) {
+    margin-top: 2rem;
+}
+
+#popup-panier p:nth-child(3), #popup-panier p:last-child{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+#delivery-price, #total-price {
+  font-size: 1.1rem;
+}
+
+
+#popup-panier table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+#popup-panier th,
+td {
+    width: 200px;
+}
+
+#popup-panier th {
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+#popup-panier td {
+    padding-top: 25px;
+    border-bottom: #c19d53 solid 1px;
+}
+
+/* Footer by Ramy */
 
 footer div {
     display: flex;
@@ -372,6 +428,4 @@ footer a {
 }
 
 /* Main responsive */
-@media screen and (max-width: 1024px) {
-
-}
+@media screen and (max-width: 1024px) {}
