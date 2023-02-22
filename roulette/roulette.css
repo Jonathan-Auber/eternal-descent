@@ -63,17 +63,24 @@ div#navbar{
     flex-direction: column; 
     position: absolute;
     top: 25%;
-    left: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* left: 40%; */
     backdrop-filter: blur(15px);
     border-radius: 15px;
     margin-left: -100%;
     transition: 0.5s;
+    z-index: 100;
 }
 
 /* Je crée une classe qui permet d'afficher/masquer le menu burger */
 div#navbar.mobile_menu {
     margin-left: 0;
     transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-top: 20vh
 }
 
 #navbar ul{
@@ -91,6 +98,19 @@ div#navbar.mobile_menu {
 
 #navbar ul li a {
     font-size: 1.5rem;
+}
+
+#navbar ul li a:hover{
+    font-weight: bold(200);
+    border: 10px solid transparent;
+    border-image-source: url("../assets/img/roulette/elden-ring-border-leaf-removebg-preview.png");
+    border-image-slice: 0 0 60 0;
+    border-image-width: 0px 0px 10px 0px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: repeat repeat;
+    padding: 2px 0;
+    transition: 0.4s;
+    text-shadow: 0 0 15px #44ff0041 ;
 }
 
 #navbar ul li a img{
@@ -112,6 +132,12 @@ div#navbar.mobile_menu {
     top: 5.2vh;
     right: 5%;
     z-index: 1000;
+}
+
+#divSpanBurger:hover{
+    cursor: pointer;
+    transform: rotate(360deg) scale(1.1);
+    transition: 0.8s;
 }
 
 .spanBurger{
@@ -143,11 +169,16 @@ div#navbar.mobile_menu {
         position: static;
         backdrop-filter: none;
         margin: 0;
+        transform: translateX(0);
     }
 
     div#navbar.mobile_menu {
         margin-left: 0;
         transition: 0.5s;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        padding-top: 0;
     }
     
 
@@ -188,12 +219,12 @@ div#navbar.mobile_menu {
         left: 98px;
     }
     #divSpanBurger{
-        top: 4.4vh;
+        top: 5vh;
     }
     #navbar{
-        left: 30%;
+        left: 50%;
+        transform: translateX(-50%);
     }
-
 }
 
 
@@ -202,10 +233,131 @@ div#navbar.mobile_menu {
 main{
     background: url("../assets/img/main-background.jpg") fixed center/cover no-repeat;
     height: 100vh;
+    padding-top: 5vh;
 }
 
+/* Div bouton "faites tourner la roue du destin */
 
-/* FOOTER BY RAMY */
+#spin_button{
+    box-shadow: 0 0 15px #44ff0041 ;
+    background-color: rgba(0, 0, 0, 0.342);
+    margin: auto;
+    width: 200px;
+    height: 17vh;
+    border-radius: 15px;
+    padding: 20px;
+    display: block;
+}
+
+.pulse{
+    animation: pulsasion infinite 2s cubic-bezier(0, 0, 1, 1);
+}
+
+@keyframes pulsasion {
+    from {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.05);
+    }
+    15%{
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.05);
+    }
+    35%{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+#spin_button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 15px #44ff0088 ;
+    transition: 0.4s;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#spin_button p{
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#axes{
+    width: 85px;
+    display: block;
+    margin: auto;
+}
+
+/* div roue du destin */
+
+#wheel{
+    margin-top: 5vh;
+}
+
+#sword{
+    display: block;
+    width: 70px;
+    margin: auto;
+}
+
+#dragon_wheel{
+    display: block;
+    width: 250px;
+    margin: auto;
+}
+
+.roule {
+    animation: rotationRoue infinite 0.7s cubic-bezier(0, 0, 1, 1);
+}
+
+@keyframes rotationRoue{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* div gain */
+
+#gain{
+    box-shadow: 0 0 15px #44ff0052 ;
+    background-color: rgba(0, 0, 0, 0.342);
+    margin: 5vh auto;
+    width: 330px;
+    border-radius: 15px;
+    padding: 20px;
+    display: block;
+    position: relative;
+}
+
+#gain p{
+    text-align: center;
+    text-shadow: 0 0 15px #44ff0088 ;
+    font-size: 1.2rem;
+}
+
+/* réalisation d'un cadre qui entoure la récompense */
+
+.gift_border{
+    border: 5px solid transparent;
+    border-image-source: url("../assets/img/roulette/elden-ring-border-leaf-removebg-preview.png");
+    border-image-slice: 0 0 60 0;
+    border-image-width: 5px 0px 5px 0px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: repeat repeat;
+    padding: 2px 0;
+    width: auto;
+    text-shadow: 0 0 20px #3bdd00 ;
+    font-weight: bold;
+}
+
+/* FOOTER BY RAMY */ 
 
 footer div {
     display: flex;
