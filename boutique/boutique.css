@@ -146,6 +146,7 @@ div#navbar.mobile_menu {
 main {
     background: url("/assets/img/body-bg.jpg") fixed center/cover no-repeat;
     width: 100%;
+    min-height: 120vh;
     padding: 30px 20px 30px 20px;
     display: flex;
     flex-direction: row;
@@ -189,13 +190,18 @@ figure {
     width: 40%;
 }
 
-.addToCart {
+button {
     background-color: #417A27;
     color: white;
+    padding: 5px;
     width: 250px;
-    height: 40px;
+    min-height: 40px;
     border-radius: 15px;
     border: none;
+}
+
+.addToCart {
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -261,14 +267,30 @@ figure {
 }
 
 /* Travail du panier popup */
+
 #popup-panier {
+    /* display: none; */
     width: 80%;
-    border: solid white 4px;
     color: white;
     background-color: #000000;
-    box-shadow: 0px 0px 20px #082B08;
+    box-shadow: 0px 0px 20px #417A27;
     border-radius: 20px;
     padding: 15px;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+}
+
+#btn-close {
+    background-color: rgb(160, 42, 42);
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    margin-left: 100%;
+    transform: translateX(-100%);
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
 }
 
 #popup-panier p {
@@ -279,18 +301,26 @@ figure {
     font-size: 1.2rem;
 }
 
-#popup-panier p:nth-child(3) {
+#popup-panier p:nth-child(4) {
     margin-top: 2rem;
 }
 
-#popup-panier p:nth-child(3), #popup-panier p:last-child{
+#popup-panier p:nth-child(4),
+#popup-panier p:nth-child(5) {
     display: flex;
     justify-content: space-between;
     font-size: 1rem;
 }
 
-#delivery-price, #total-price {
-  font-size: 1.1rem;
+#popup-panier p:nth-child(6) {
+    color: white;
+    font-size: 0.7rem;
+    text-align: left;
+}
+
+#delivery-price,
+#total-price {
+    font-size: 1.1rem;
 }
 
 
@@ -312,7 +342,50 @@ td {
 
 #popup-panier td {
     padding-top: 25px;
+    padding-bottom: 4px;
     border-bottom: #c19d53 solid 1px;
+}
+
+#btn-paid {
+    display: block;
+    width: 40%;
+    margin: 30px auto;
+    font-size: 1rem;
+}
+
+#btn-delete {
+    display: block;
+    background-color: rgb(160, 42, 42);
+    width: 20%;
+    font-size: 0.8rem;
+    margin: 30px auto;
+}
+
+.btn-plus,
+.btn-moins {
+    width: 30px;
+    font-size: 1.5rem;
+    transform: scale(0.8);
+    background-color: #c19d53;
+}
+
+.btn-moins {
+    border-radius: 15px 0 0 15px;
+    /* margin-left: 9vw; */
+}
+
+.btn-plus {
+    border-radius: 0 15px 15px 0;
+}
+
+/* Classe créer pour servir à javascript à appliquer un blur sur l'arrière-plan lors de l'affichage du panier */
+.blur {
+    filter: blur(10px);
+}
+
+/* Création d'une classe qui servira à appliquer un display:none au tableau ainsi qu'aux éléments du tableau */
+.off {
+    display: none;
 }
 
 /* Footer by Ramy */

@@ -6,6 +6,23 @@ menuHamburger.addEventListener('click', () => {
     navLinks.classList.toggle('mobile_menu')
 })
 
+// Affichage du panier
+const panier = document.querySelector("#cart");
+const popupPanier = document.querySelector("#popup-panier");
+const article = document.querySelectorAll(".art-bg");
+const title = document.querySelector(".title-bg");
+
+function popup () {
+    if (popupPanier.classList === "off") {
+        popupPanier.classList.toggle("off");
+        article.classList.add("blur");
+    } else {
+        popupPanier.classList.toggle("off")
+    }
+}
+
+panier.addEventListener("click", popup);
+
 
 // Controle du panier
 const counter = document.getElementById("count");
