@@ -1,47 +1,162 @@
 @font-face {
-    font-family: poppins;
-    src: url(../assets/fonts/Poppins-Regular.ttf);
+    font-family: "poppins";
+    src: url("/assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "NightmarePill";
+    src: url("/assets/fonts/NightmarePills-BV2w.ttf");
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: poppins, sans-serif;
+    font-family: "poppins", sans-serif;
     font-size: 0.9rem;
     list-style: none;
+    text-decoration: none;
 }
 
-/* A effacer plus tard */
-.wrap {
-    width: 370px;
+/* Header Matthieu */
+
+/* Je sépare le header en 2 parties, d'un côté le titre du jeu et de l'autre la navbar et je les dispose avec flexbox */
+
+header {
+    color: #C19D53;
+    background: linear-gradient(180deg, #000000 0%, #082B08 42.86%, #082B08 59.43%, #000000 100%);
+    /* mise en forme du padding et de la hauteur */
+    height: 15vh;
+    width: 100%;
+    padding-top: 2vh;
+    padding-left: 2%;
+    padding-right: 2%;
+    /* mise en place du flex */
+}
+
+#logo {
+    position: relative;
+}
+
+h1 {
+    font-family: "NightmarePill";
+    font-size: 2.5rem;
+    word-spacing: 120px;
+    text-shadow: 0 0 20px rgba(9, 255, 0, 0.308);
+    width: 100%;
+    padding-top: 2vh;
+}
+
+#img_logo {
+    /* l'image est en absolute pour se placer sur le H1 sans qu'il ne bouge */
+    /* elle disparait au responsive te le word spacing du h1 disparait */
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 130px;
+}
+
+
+/* NAVBAR DU MENU BURGER DEPLOYE */
+
+
+div#navbar {
+    /* width: 100%; */
+    visibility: visible;
+    flex-direction: column;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    margin-left: -100%;
+    transition: 0.5s;
+}
+
+/* Je crée une classe qui permet d'afficher/masquer le menu burger */
+div#navbar.mobile_menu {
+    margin-left: 0;
+    transition: 0.5s;
+}
+
+#navbar ul {
+    /* j'espace les li avec flexbox et du padding sur les li*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+#navbar ul li {
+    padding: 30px;
+}
+
+#navbar ul li a {
+    font-size: 1.5rem;
+    color: #C19D53;
+}
+
+#navbar ul li a img {
+    width: 30px;
+}
+
+
+
+/* LA DIV SPAN BURGER */
+
+#divSpanBurger {
+    display: flex;
+    flex-direction: column;
+    height: 3vh;
+    width: 5%;
+    justify-content: space-around;
+    /* Je le mets en position absolute pour plus de liberté lors de la mise en place du menu burger */
+    position: absolute;
+    top: 5.2vh;
+    right: 5%;
+    z-index: 1000;
+}
+
+.spanBurger {
+    /* mise en forme des span du menu burger */
+    height: 3px;
+    width: 30px;
     margin: auto;
+    background-color: #C19D53;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #f0e0c1;
 }
 
-/* A effacer plus tard */
+/* Header Matthieu */
 
-/* body {
-    background: url("/assets/img/body-bg.jpg") fixed center/cover no-repeat;
-} */
+
 
 main {
     background: url("/assets/img/body-bg.jpg") fixed center/cover no-repeat;
     width: 100%;
-    margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 30px 20px 30px 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     gap: 50px;
 }
 
+main h2 {
+    width: 90%;
+    font-size: 1.1rem;
+    color: #C19D53;
+    text-align: center;
+}
+
 /* Composant goodie */
 article {
     transform: scale(0.9);
-    width: 90%;
-    height: 25vh;
+    width: 400px;
+    height: 30vh;
     padding: 15px;
     background-color: black;
     color: white;
@@ -51,6 +166,7 @@ article {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    position: relative;
 }
 
 article:hover {
@@ -62,7 +178,7 @@ figure {
     width: 40%;
 }
 
-button {
+.addToCart {
     background-color: #417A27;
     color: white;
     width: 250px;
@@ -72,12 +188,14 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    transform: scale(0.9);
+    position: absolute;
+    bottom: 0;
+    transform:  translateY(60%);
 }
 
-button:hover {
+.addToCart:hover {
     box-shadow: 0px 0px 30px #c19d53;
-    transform: scale(1);
+    transform: translateY(60%);
     transition: 1s;
 }
 
@@ -162,4 +280,88 @@ footer a {
     text-decoration: none;
     font-size: 0.8rem;
     color: white;
+}
+
+
+
+/* A partir de maintenant, on trouve le code Responsive */
+
+/* Header responsive */
+
+@media screen and (min-width: 1470px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    div#navbar {
+        visibility: visible;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 50%;
+        position: static;
+        backdrop-filter: none;
+        margin: 0;
+    }
+
+    div#navbar.mobile_menu {
+        margin-left: 0;
+        transition: 0.5s;
+    }
+
+
+    #navbar ul {
+        /* j'espace les li avec flexbox et du padding sur les li*/
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+
+    #navbar ul li {
+        padding: 0 5%;
+    }
+
+    #divSpanBurger {
+        visibility: hidden;
+    }
+
+    h1 {
+        word-spacing: 0;
+        font-size: 5rem;
+    }
+
+    #img_logo {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    h1 {
+        font-size: 2rem;
+        word-spacing: 70px;
+    }
+
+    #img_logo {
+        width: 70px;
+        top: 6px;
+        left: 98px;
+    }
+
+    #divSpanBurger {
+        top: 4.4vh;
+    }
+
+    #navbar {
+        left: 30%;
+    }
+}
+
+/* Main responsive */
+@media screen and (max-width: 1024px) {
+
 }

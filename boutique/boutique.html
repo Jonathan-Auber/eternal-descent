@@ -13,10 +13,57 @@
 
     <div class="wrap">
         <!-- Header Matthieu -->
+        <!------- HEADER -------->
+        <!-- Nous allons disposer le titre du jeu à gauche et le menu (burger) à droite avec flexbox -->
 
+        <header>
+
+            <!-- Titre du jeu -->
+
+            <div id="logo">
+                <h1>
+                    Eternal Descent
+                </h1>
+                <img src="/assets/img/Logo.png" alt="logo" id="img_logo">
+            </div>
+
+            <!-- Menu navigation -->
+
+            <div id="navbar">
+                <ul>
+                    <li>
+                        <a href="/index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="/boutique/boutique.html">Boutique</a>
+                    </li>
+                    <li>
+                        <a href="/roulette/roulette.html">Concours</a>
+                    </li>
+                    <li>
+                        <a href="/contact/contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/icons/panier_64.png" alt="Panier">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- La div qui englobe la span du menu burger -->
+
+            <div id="divSpanBurger">
+                <span class="spanBurger"></span>
+                <span class="spanBurger"></span>
+                <span class="spanBurger"></span>
+            </div>
+
+        </header>
         <!-- Header Matthieu -->
 
         <main>
+            <h2>Découvrez notre liste de produit dérivés qui vous permettront de jouer à Eternal Descent en immersion totale.</h2>
             <!-- Composant mug blanc -->
             <article id="mug-blanc">
                 <figure><img src="/assets/img/goodies/mug_blanc.png"
@@ -100,6 +147,7 @@
         </footer>
         <!-- Footer Ramy -->
     </div>
+    <script type="text/javascript" src="/assets/js/menuBurger.js"></script>
     <script type="text/javascript" src="/assets/js/boutique/boutique.js"></script>
 
     <div id="popup-panier"></div>
