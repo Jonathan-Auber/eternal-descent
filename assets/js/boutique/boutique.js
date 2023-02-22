@@ -9,16 +9,18 @@ menuHamburger.addEventListener('click', () => {
 // Affichage du panier
 const panier = document.querySelector("#cart");
 const popupPanier = document.querySelector("#popup-panier");
-const article = document.querySelectorAll(".art-bg");
+const goodie = document.querySelectorAll(".art-bg");
 const title = document.querySelector(".title-bg");
 
+console.log(title);
+
+// A voir si modification nécéssaire par la suite quand on pourra fermer avec la croix
 function popup () {
-    if (popupPanier.classList === "off") {
+    if (popupPanier.classList !== "") {
         popupPanier.classList.toggle("off");
-        article.classList.add("blur");
-    } else {
-        popupPanier.classList.toggle("off")
-    }
+        title.classList.toggle("blur");
+        goodie.forEach(element => element.classList.toggle("blur"));   
+    } 
 }
 
 panier.addEventListener("click", popup);
