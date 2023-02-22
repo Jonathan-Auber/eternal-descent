@@ -61,7 +61,6 @@ h1 {
 
 
 div#navbar {
-    /* width: 100%; */
     visibility: visible;
     flex-direction: column;
     position: absolute;
@@ -90,6 +89,17 @@ div#navbar.mobile_menu {
 
 #navbar ul li {
     padding: 30px;
+}
+
+#navbar ul li:last-child {
+    display: flex;
+    align-items: center;
+}
+
+#count {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-left: 5px;
 }
 
 #navbar ul li a {
