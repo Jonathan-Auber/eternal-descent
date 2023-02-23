@@ -61,19 +61,20 @@ h1 {
 
 
 div#navbar {
-   /*width: 100%;
-   */visibility: visible;
-   flex-direction: column;
-   position: absolute;
-   top: 25%;
-   left: 50%;
-   transform: translateX(-50%);
-   backdrop-filter: blur(15px);
-   -webkit-backdrop-filter: blur(15px);
-   border-radius: 15px;
-   margin-left: -100%;
-   transition: 0.5s;
-   z-index: 10;
+    /*width: 100%;
+   */
+    visibility: visible;
+    flex-direction: column;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 15px;
+    margin-left: -100%;
+    transition: 0.5s;
+    z-index: 10;
 }
 
 /* Je crée une classe qui permet d'afficher/masquer le menu burger */
@@ -184,97 +185,7 @@ div#navbar.mobile_menu {
 
 }
 
-@media screen and (min-width: 1470px) {
-    header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-    }
 
-    #logo h1 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    div#navbar {
-        visibility: visible;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        width: 50%;
-        height: auto;
-        position: static;
-        backdrop-filter: none;
-        margin: 0;
-        transform: translateX(0);
-    }
-
-    div#navbar.mobile_menu {
-        margin-left: 0;
-        transition: 0.5s;
-        width: 50%;
-        height: 100%;
-        top: 0;
-        padding-top: 0;
-    }
-
-
-    #navbar ul {
-        /* j'espace les li avec flexbox et du padding sur les li*/
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        justify-content: space-around;
-    }
-
-    #navbar ul li {
-        padding: 0 10%;
-    }
-
-    #navbar ul li a {
-        font-size: 1.2rem;
-    }
-
-    #divSpanBurger {
-        visibility: hidden;
-    }
-
-    h1 {
-        word-spacing: 0;
-        font-size: 5rem;
-    }
-
-    #img_logo {
-        visibility: hidden;
-    }
-}
-
-@media screen and (max-width: 475px) {
-    h1 {
-        font-size: 2rem;
-        word-spacing: 70px;
-    }
-
-    #img_logo {
-        width: 70px;
-        top: 6px;
-        left: 98px;
-    }
-
-    #divSpanBurger {
-        top: 5vh;
-    }
-
-    #navbar {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
 
 /* Header Matthieu */
 
@@ -580,3 +491,109 @@ footer a {
 
 
 /* A partir de maintenant, on trouve le code Responsive */
+
+/* Responsive du header */
+@media screen and (min-width: 1470px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    #logo h1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    div#navbar {
+        visibility: visible;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        height: auto;
+        position: static;
+        backdrop-filter: none;
+        margin: 0;
+        transform: translateX(0);
+    }
+
+    div#navbar.mobile_menu {
+        margin-left: 0;
+        transition: 0.5s;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        padding-top: 0;
+    }
+
+
+    #navbar ul {
+        /* j'espace les li avec flexbox et du padding sur les li*/
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+
+    #navbar ul li {
+        padding: 0 10%;
+    }
+
+    #navbar ul li a {
+        font-size: 1.2rem;
+    }
+
+    #divSpanBurger {
+        visibility: hidden;
+    }
+
+    h1 {
+        word-spacing: 0;
+        font-size: 5rem;
+    }
+
+    #img_logo {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    h1 {
+        font-size: 2rem;
+        word-spacing: 70px;
+    }
+
+    #img_logo {
+        width: 70px;
+        top: 6px;
+        left: 98px;
+    }
+
+    #divSpanBurger {
+        top: 5vh;
+    }
+
+    #navbar {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive du panier */
+
+/* @media screen and (max-width: 720px) {
+    #popup-panier th,
+    td {
+        width: 150px;
+    }
+} */
+
+.hide > td:last-child {
+    width: 100px;
+}
