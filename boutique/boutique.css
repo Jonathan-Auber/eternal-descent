@@ -61,19 +61,19 @@ h1 {
 
 
 div#navbar {
-    /* width: 100%; */
-    visibility: visible;
-    flex-direction: column;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    /* left: 40%; */
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    margin-left: -100%;
-    transition: 0.5s;
-    z-index: 100;
+   /*width: 100%;
+   */visibility: visible;
+   flex-direction: column;
+   position: absolute;
+   top: 25%;
+   left: 50%;
+   transform: translateX(-50%);
+   backdrop-filter: blur(15px);
+   -webkit-backdrop-filter: blur(15px);
+   border-radius: 15px;
+   margin-left: -100%;
+   transition: 0.5s;
+   z-index: 10;
 }
 
 /* Je crée une classe qui permet d'afficher/masquer le menu burger */
@@ -149,7 +149,7 @@ div#navbar.mobile_menu {
     position: absolute;
     top: 5.2vh;
     right: 5%;
-    z-index: 1000;
+    z-index: 100;
 }
 
 #divSpanBurger:hover {
@@ -415,7 +415,7 @@ button {
     padding: 15px;
     position: absolute;
     top: 80px;
-    z-index: 1;
+    z-index: 200;
 }
 
 #btn-close {
