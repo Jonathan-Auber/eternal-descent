@@ -3,12 +3,12 @@
     src: url("../assets/fonts/NightmarePills-BV2w.ttf");
 }
 
-@font-face{
+@font-face {
     font-family: "PoppinsReg";
     src: url("../assets/fonts/Poppins-Regular.ttf");
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -20,7 +20,7 @@
 
 /* Je sépare le header en 2 parties, d'un côté le titre du jeu et de l'autre la navbar et je les dispose avec flexbox */
 
-header{
+header {
     background: linear-gradient(180deg, #000000 0%, #082B08 42.86%, #082B08 59.43%, #000000 100%);
     /* mise en forme du padding et de la hauteur */
     height: 15vh;
@@ -31,11 +31,11 @@ header{
     /* mise en place du flex */
 }
 
-#logo{
+#logo {
     position: relative;
 }
 
-h1{
+h1 {
     font-family: "NightmarePill";
     font-size: 2.5rem;
     word-spacing: 120px;
@@ -44,7 +44,7 @@ h1{
     padding-top: 2vh;
 }
 
-#img_logo{
+#img_logo {
     /* l'image est en absolute pour se placer sur le H1 sans qu'il ne bouge */
     /* elle disparait au responsive te le word spacing du h1 disparait */
     width: 100px;
@@ -57,10 +57,10 @@ h1{
 /* NAVBAR DU MENU BURGER DEPLOYE */
 
 
-div#navbar{
+div#navbar {
     /* width: 100%; */
     visibility: visible;
-    flex-direction: column; 
+    flex-direction: column;
     position: absolute;
     top: 25%;
     left: 50%;
@@ -83,7 +83,7 @@ div#navbar.mobile_menu {
     padding-top: 20vh
 }
 
-#navbar ul{
+#navbar ul {
     /* j'espace les li avec flexbox et du padding sur les li*/
     display: flex;
     flex-direction: column;
@@ -92,7 +92,7 @@ div#navbar.mobile_menu {
 }
 
 
-#navbar ul li{
+#navbar ul li {
     padding: 30px;
 }
 
@@ -100,7 +100,7 @@ div#navbar.mobile_menu {
     font-size: 1.5rem;
 }
 
-#navbar ul li a:hover{
+#navbar ul li a:hover {
     font-weight: bold(200);
     border: 10px solid transparent;
     border-image-source: url("../assets/img/roulette/elden-ring-border-leaf-removebg-preview.png");
@@ -110,10 +110,10 @@ div#navbar.mobile_menu {
     border-image-repeat: repeat repeat;
     padding: 2px 0;
     transition: 0.4s;
-    text-shadow: 0 0 15px #44ff0041 ;
+    text-shadow: 0 0 15px #44ff0041;
 }
 
-#navbar ul li a img{
+#navbar ul li a img {
     width: 30px;
 }
 
@@ -121,7 +121,7 @@ div#navbar.mobile_menu {
 
 /* LA DIV SPAN BURGER */
 
-#divSpanBurger{
+#divSpanBurger {
     display: flex;
     flex-direction: column;
     height: 3vh;
@@ -134,13 +134,13 @@ div#navbar.mobile_menu {
     z-index: 1000;
 }
 
-#divSpanBurger:hover{
+#divSpanBurger:hover {
     cursor: pointer;
     transform: rotate(360deg) scale(1.1);
     transition: 0.8s;
 }
 
-.spanBurger{
+.spanBurger {
     /* mise en forme des span du menu burger */
     height: 3px;
     width: 30px;
@@ -151,23 +151,23 @@ div#navbar.mobile_menu {
     box-shadow: 0 0 10px #f0e0c1;
 }
 
-.deleteSpan{
+.deleteSpan {
     display: none;
 }
 
-.crossSpan1{
+.crossSpan1 {
     transform: rotate(45deg);
     position: absolute;
 }
 
-.crossSpan2{
+.crossSpan2 {
     transform: rotate(-45deg);
     position: absolute;
 
 }
 
-@media  screen and (min-width: 1470px) {
-    header{
+@media screen and (min-width: 1470px) {
+    header {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -175,14 +175,14 @@ div#navbar.mobile_menu {
         position: relative;
     }
 
-    #logo h1{
+    #logo h1 {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;   
+        justify-content: space-around;
     }
 
-    div#navbar{
+    div#navbar {
         visibility: visible;
         display: flex;
         flex-direction: row;
@@ -204,9 +204,9 @@ div#navbar.mobile_menu {
         top: 0;
         padding-top: 0;
     }
-    
 
-    #navbar ul{
+
+    #navbar ul {
         /* j'espace les li avec flexbox et du padding sur les li*/
         display: flex;
         flex-direction: row;
@@ -214,42 +214,45 @@ div#navbar.mobile_menu {
         justify-content: space-around;
     }
 
-    #navbar ul li{
+    #navbar ul li {
         padding: 0 10%;
     }
 
-    #navbar ul li a{
+    #navbar ul li a {
         font-size: 1.2rem;
     }
 
-    #divSpanBurger{
+    #divSpanBurger {
         visibility: hidden;
     }
 
-    h1{
+    h1 {
         word-spacing: 0;
         font-size: 5rem;
     }
 
-    #img_logo{
+    #img_logo {
         visibility: hidden;
     }
 }
 
-@media  screen and (max-width: 475px) {
-    h1{
+@media screen and (max-width: 475px) {
+    h1 {
         font-size: 2rem;
         word-spacing: 70px;
     }
-    #img_logo{
+
+    #img_logo {
         width: 70px;
         top: 6px;
         left: 98px;
     }
-    #divSpanBurger{
+
+    #divSpanBurger {
         top: 5vh;
     }
-    #navbar{
+
+    #navbar {
         left: 50%;
         transform: translateX(-50%);
     }
@@ -258,7 +261,7 @@ div#navbar.mobile_menu {
 
 /* MAIN */
 
-main{
+main {
     background: url("../assets/img/main-background.jpg") fixed center/cover no-repeat;
     height: 100vh;
     padding-top: 5vh;
@@ -266,8 +269,8 @@ main{
 
 /* Div bouton "faites tourner la roue du destin */
 
-#spin_button{
-    box-shadow: 0 0 15px #44ff0041 ;
+#spin_button {
+    box-shadow: 0 0 15px #44ff0041;
     background-color: rgba(0, 0, 0, 0.342);
     margin: auto;
     width: 200px;
@@ -277,7 +280,7 @@ main{
     display: block;
 }
 
-.pulse{
+.pulse {
     animation: pulsasion infinite 2s cubic-bezier(0, 0, 1, 1);
 }
 
@@ -285,36 +288,41 @@ main{
     from {
         transform: scale(1);
     }
+
     10% {
         transform: scale(1.05);
     }
-    15%{
+
+    15% {
         transform: scale(1);
     }
+
     25% {
         transform: scale(1.05);
     }
-    35%{
+
+    35% {
         transform: scale(1);
     }
-    to{
+
+    to {
         transform: scale(1);
     }
 }
 
-#spin_button:hover{
+#spin_button:hover {
     cursor: pointer;
-    box-shadow: 0 0 15px #44ff0088 ;
+    box-shadow: 0 0 15px #44ff0088;
     transition: 0.4s;
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-#spin_button p{
+#spin_button p {
     text-align: center;
     font-size: 0.9rem;
 }
 
-#axes{
+#axes {
     width: 85px;
     display: block;
     margin: auto;
@@ -322,17 +330,17 @@ main{
 
 /* div roue du destin */
 
-#wheel{
+#wheel {
     margin-top: 5vh;
 }
 
-#sword{
+#sword {
     display: block;
     width: 70px;
     margin: auto;
 }
 
-#dragon_wheel{
+#dragon_wheel {
     display: block;
     width: 250px;
     margin: auto;
@@ -342,10 +350,11 @@ main{
     animation: rotationRoue infinite 0.7s cubic-bezier(0, 0, 1, 1);
 }
 
-@keyframes rotationRoue{
+@keyframes rotationRoue {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -353,8 +362,8 @@ main{
 
 /* div gain */
 
-#gain{
-    box-shadow: 0 0 15px #44ff0052 ;
+#gain {
+    box-shadow: 0 0 15px #44ff0052;
     background-color: rgba(0, 0, 0, 0.342);
     margin: 5vh auto;
     width: 330px;
@@ -364,15 +373,15 @@ main{
     position: relative;
 }
 
-#gain p{
+#gain p {
     text-align: center;
-    text-shadow: 0 0 15px #44ff0088 ;
+    text-shadow: 0 0 15px #44ff0088;
     font-size: 1.2rem;
 }
 
 /* réalisation d'un cadre qui entoure la récompense */
 
-.gift_border{
+.gift_border {
     border: 5px solid transparent;
     border-image-source: url("../assets/img/roulette/elden-ring-border-leaf-removebg-preview.png");
     border-image-slice: 0 0 60 0;
@@ -381,11 +390,11 @@ main{
     border-image-repeat: repeat repeat;
     padding: 2px 0;
     width: auto;
-    text-shadow: 0 0 20px #3bdd00 ;
+    text-shadow: 0 0 20px #3bdd00;
     font-weight: bold;
 }
 
-/* FOOTER BY RAMY */ 
+/* FOOTER BY RAMY */
 
 footer div {
     display: flex;
@@ -394,24 +403,24 @@ footer div {
     justify-content: space-evenly;
     align-content: center;
     line-height: 25px;
-    }
-    
-#team{
+}
+
+#team {
     /* margin-left: 35%; */
     margin-top: 30px;
 }
-    
+
 footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    width:100%;
-    background: linear-gradient( rgba(0,0,0,1), rgba(8,43,8,1) , rgba(8,43,8,1) , rgba(0,0,0,1) );
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(8, 43, 8, 1), rgba(8, 43, 8, 1), rgba(0, 0, 0, 1));
     color: white;
 }
-    
+
 footer a {
     text-decoration: none;
 }

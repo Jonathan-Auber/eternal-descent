@@ -1,10 +1,24 @@
-// Menu Burger
-const menuHamburger = document.querySelector("#divSpanBurger")
-const navLinks = document.querySelector("#navbar")
+// MENU BURGER
 
-menuHamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('mobile_menu')
+// On recupère le triple span qui sert de bouton
+const menuHamburger = document.querySelector("#divSpanBurger");
+// On récupère la navbar
+const navLinks = document.querySelector("#navbar");
+// On récupère les 3 spans du bouton pour pouvoir jouer avec, indépendement
+const topSpan = document.getElementById("topSpan");
+const middleSpan = document.getElementById("middleSpan");
+const bottomSpan = document.getElementById("bottomSpan");
+ 
+// On écoute le clic sur le bouton
+menuHamburger.addEventListener('click',()=>{
+        // on applique la classe qui fait pop la navbar
+        navLinks.classList.toggle('mobile_menu');
+        // on applique les classes qui modifie l'apparence du bouton
+        topSpan.classList.toggle('crossSpan1');
+        middleSpan.classList.toggle('deleteSpan');
+        bottomSpan.classList.toggle('crossSpan2')
 })
+
 
 // Affichage du panier
 const panier = document.querySelector("#cart");
