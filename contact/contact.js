@@ -14,7 +14,7 @@ const answerOnline = document.querySelector(".answer_online")
 const answerCoop = document.querySelector(".answer_coop")
 
 /* Fonction pour faire apparaitre et disparaitre les réponses FAQ depuis le bord gauche du site */
-function answerDateOn() {
+function answerOn() {
     let select = questionEl.value
     console.log(select)
     if (select == "date") {
@@ -49,4 +49,58 @@ function answerDateOn() {
         answerCoop.classList.remove("adOn")
     }
 }
-questionEl.addEventListener("click", answerDateOn)
+questionEl.addEventListener("click", answerOn)
+
+/* Au chargement de la page vérifier si il y a des questions en local storage et les affichers si elles existent, sinon créer un tableau vide */
+
+
+function alreadyStored() {
+    let questionTab = [];
+    console.log(localStorage.getItem("question"))
+    const storedQuestion = localStorage.getItem("question");
+    if (storedQuestion !== null) {
+        questionTab = JSON.parse(storedQuestion);
+        editStorage(questionTab);
+    }
+    return questionTab;
+}
+window.addEventListener("open", alreadyStored)
+const questionTab = alreadyStored();
+
+/* Récupérer la valeur de la question, la stocker en local storage et afficher la question */
+
+const freeQuestion = document.querySelector("#free_question")
+const submitQuestion = document.querySelector("#submit_question")
+
+function storage() {
+    questionTab.push(freeQuestion.value)
+    localStorage.setItem("question", JSON.stringify(questionTab))
+    editQuestion(questionTab)
+}
+submitQuestion.addEventListener("click", storage)
+
+
+
+/* boucle pour créer une div pour chaque élément présent dans le localStorage */
+
+function editStorage(questionTab) {
+    for (var i = 0; i < questionTab.length; i++) {
+        const questionSend = document.querySelector(".question_send");
+        const newQuestion = document.createElement("div");
+        newQuestion.classList.add("question_send1");
+        newQuestion.textContent = questionTab[i];
+        questionSend.appendChild(newQuestion);
+    }
+}
+
+/* Création de l'affichage des nouvelles questions submit */
+
+function editQuestion(questionTab) {
+    const questionSend = document.querySelector(".question_send");
+    const newQuestion = document.createElement("div");
+    newQuestion.classList.add("question_send1");
+    var a = questionTab.length - 1;
+    newQuestion.textContent = questionTab[a];
+    questionSend.appendChild(newQuestion);
+}
+

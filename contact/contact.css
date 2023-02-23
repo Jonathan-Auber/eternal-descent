@@ -274,14 +274,21 @@ iframe {
 
 /**************************FAQ liste déroulante**************************/
 
-.faq {
+.faq,
+.question2,
+.question_send {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   width: 80vw;
 }
-select {
+.question_send {
+  margin-bottom: 15px;
+}
+select,
+#free_question,
+.question_send1 {
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 20px rgba(66, 255, 0, 0.4);
@@ -293,6 +300,7 @@ select {
   padding: 10px;
   font-size: 0.9rem;
   font-family: poppins, sans-serif;
+  overflow: hidden;
 }
 option {
   background: black;
@@ -326,6 +334,22 @@ option {
   transition: 0.8s;
   transition-delay: 0.2s;
   transition-timing-function: cubic-bezier(0, 0.92, 0.95, 0.71);
+}
+
+/****************************Bouton submit question**********************/
+
+#submit_question {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px rgba(66, 255, 0, 0.4);
+  color: #c19d53;
+  text-align: center;
+  border: none;
+  outline: none;
+  width: 250px;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-family: poppins, sans-serif;
 }
 
 /****************************footer*******************************************************/
@@ -375,7 +399,10 @@ footer a {
     padding-top: 50px;
   }
   main,
-  select {
+  select,
+  #free_question,
+  #submit_question,
+  .question_send1 {
     font-size: 1.2rem;
   }
   h2 {
@@ -384,8 +411,15 @@ footer a {
 }
 @media screen and (min-width: 1000px) {
   .faq,
-  .answer {
+  .answer,
+  .question2,
+  .question_send {
     width: 800px;
+    gap: 40px;
+  }
+  .question_send {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .map {
     width: 40vw;
