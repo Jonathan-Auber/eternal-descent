@@ -1,11 +1,20 @@
+
+// MENU BURGER
+
+// On recupère le triple span qui sert de bouton
 const menuHamburger = document.querySelector("#divSpanBurger");
+// On récupère la navbar
 const navLinks = document.querySelector("#navbar");
+// On récupère les 3 spans du bouton pour pouvoir jouer avec, indépendement
 const topSpan = document.getElementById("topSpan");
 const middleSpan = document.getElementById("middleSpan");
 const bottomSpan = document.getElementById("bottomSpan");
  
+// On écoute le clic sur le bouton
 menuHamburger.addEventListener('click',()=>{
+        // on applique la classe qui fait pop la navbar
         navLinks.classList.toggle('mobile_menu');
+        // on applique les classes qui modifie l'apparence du bouton
         topSpan.classList.toggle('crossSpan1');
         middleSpan.classList.toggle('deleteSpan');
         bottomSpan.classList.toggle('crossSpan2')
@@ -28,7 +37,9 @@ startAndStop.addEventListener('click', ()=>{
         if (textStartStop.innerHTML=="Cliquez pour lancer la roue du destin") {
                 textStartStop.innerHTML= "Cliquez pour arreter la roue du destin";
                 startAndStop.classList.remove("pulse");
-                startAndStop.style.boxShadow="0 0 15px #ff0000c2"
+                startAndStop.style.boxShadow="0 0 15px #ff0000c2";
+                preGift.innerHTML="Qu'allez vous gagner?"
+                gift.innerHTML="";
         } else {
                 textStartStop.innerHTML= "Cliquez pour lancer la roue du destin";
                 startAndStop.classList.add("pulse");
