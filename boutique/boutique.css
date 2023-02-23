@@ -313,6 +313,7 @@ button {
 #popup-panier p:nth-child(5) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 1rem;
 }
 
@@ -325,6 +326,10 @@ button {
 #delivery-price,
 #total-price {
     font-size: 1.1rem;
+}
+
+#total-price {
+    margin-left: auto;
 }
 
 
@@ -363,6 +368,10 @@ td {
     width: 20%;
     font-size: 0.8rem;
     margin: 30px auto;
+}
+
+#btn-delete:hover {
+    cursor: pointer;
 }
 
 .btn-plus,
