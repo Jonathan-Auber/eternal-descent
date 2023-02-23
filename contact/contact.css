@@ -71,17 +71,24 @@ div#navbar {
   flex-direction: column;
   position: absolute;
   top: 25%;
-  left: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* left: 40%; */
   backdrop-filter: blur(15px);
   border-radius: 15px;
   margin-left: -100%;
   transition: 0.5s;
+  z-index: 100;
 }
 
 /* Je crée une classe qui permet d'afficher/masquer le menu burger */
 div#navbar.mobile_menu {
   margin-left: 0;
   transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding-top: 20vh;
 }
 
 #navbar ul {
@@ -99,6 +106,7 @@ div#navbar.mobile_menu {
 #navbar ul li a {
   font-size: 1.5rem;
 }
+
 #navbar ul li a:hover {
   font-weight: bold(200);
   border: 10px solid transparent;
@@ -131,6 +139,12 @@ div#navbar.mobile_menu {
   z-index: 1000;
 }
 
+#divSpanBurger:hover {
+  cursor: pointer;
+  transform: rotate(360deg) scale(1.1);
+  transition: 0.8s;
+}
+
 .spanBurger {
   /* mise en forme des span du menu burger */
   height: 3px;
@@ -142,29 +156,57 @@ div#navbar.mobile_menu {
   box-shadow: 0 0 10px #f0e0c1;
 }
 
+.deleteSpan {
+  display: none;
+}
+
+.crossSpan1 {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.crossSpan2 {
+  transform: rotate(-45deg);
+  position: absolute;
+}
+
 @media screen and (min-width: 1470px) {
   header {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     position: relative;
   }
+
+  #logo h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
   div#navbar {
     visibility: visible;
     display: flex;
     flex-direction: row;
-    /* align-items: baseline; */
+    align-items: center;
     justify-content: space-around;
     width: 50%;
+    height: auto;
     position: static;
     backdrop-filter: none;
     margin: 0;
+    transform: translateX(0);
   }
 
   div#navbar.mobile_menu {
     margin-left: 0;
     transition: 0.5s;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    padding-top: 0;
   }
 
   #navbar ul {
@@ -176,7 +218,11 @@ div#navbar.mobile_menu {
   }
 
   #navbar ul li {
-    padding: 0 5%;
+    padding: 0 10%;
+  }
+
+  #navbar ul li a {
+    font-size: 1.2rem;
   }
 
   #divSpanBurger {
@@ -204,10 +250,11 @@ div#navbar.mobile_menu {
     left: 98px;
   }
   #divSpanBurger {
-    top: 4.4vh;
+    top: 5vh;
   }
   #navbar {
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
