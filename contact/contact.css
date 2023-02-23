@@ -118,7 +118,7 @@ div#navbar.mobile_menu {
 
 /* LA DIV SPAN BURGER */
 
-#divSpanBurger {
+##divSpanBurger{
   display: flex;
   flex-direction: column;
   height: 3vh;
@@ -131,85 +131,126 @@ div#navbar.mobile_menu {
   z-index: 1000;
 }
 
-.spanBurger {
+#divSpanBurger:hover{
+  cursor: pointer;
+  transform: rotate(360deg) scale(1.1);
+  transition: 0.8s;
+}
+
+.spanBurger{
   /* mise en forme des span du menu burger */
   height: 3px;
   width: 30px;
   margin: auto;
-  background-color: #c19d53;
+  background-color: #C19D53;
   display: inline-block;
   border-radius: 5px;
   box-shadow: 0 0 10px #f0e0c1;
 }
 
-@media screen and (min-width: 1470px) {
-  header {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-    position: relative;
+.deleteSpan{
+  display: none;
+}
+
+.crossSpan1{
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.crossSpan2{
+  transform: rotate(-45deg);
+  position: absolute;
+
+}
+
+@media  screen and (min-width: 1470px) {
+  header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
   }
-  div#navbar {
-    visibility: visible;
-    display: flex;
-    flex-direction: row;
-    /* align-items: baseline; */
-    justify-content: space-around;
-    width: 50%;
-    position: static;
-    backdrop-filter: none;
-    margin: 0;
+
+  #logo h1{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;   
+  }
+
+  div#navbar{
+      visibility: visible;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 50%;
+      height: auto;
+      position: static;
+      backdrop-filter: none;
+      margin: 0;
+      transform: translateX(0);
   }
 
   div#navbar.mobile_menu {
-    margin-left: 0;
-    transition: 0.5s;
+      margin-left: 0;
+      transition: 0.5s;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      padding-top: 0;
+  }
+  
+
+  #navbar ul{
+      /* j'espace les li avec flexbox et du padding sur les li*/
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-around;
   }
 
-  #navbar ul {
-    /* j'espace les li avec flexbox et du padding sur les li*/
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-around;
+  #navbar ul li{
+      padding: 0 10%;
   }
 
-  #navbar ul li {
-    padding: 0 5%;
+  #navbar ul li a{
+      font-size: 1.2rem;
   }
 
-  #divSpanBurger {
-    visibility: hidden;
+  #divSpanBurger{
+      visibility: hidden;
   }
 
-  h1 {
-    word-spacing: 0;
-    font-size: 5rem;
+  h1{
+      word-spacing: 0;
+      font-size: 5rem;
   }
 
-  #img_logo {
-    visibility: hidden;
+  #img_logo{
+      visibility: hidden;
   }
 }
 
-@media screen and (max-width: 475px) {
-  h1 {
-    font-size: 2rem;
-    word-spacing: 70px;
+@media  screen and (max-width: 475px) {
+  h1{
+      font-size: 2rem;
+      word-spacing: 70px;
   }
-  #img_logo {
-    width: 70px;
-    top: 6px;
-    left: 98px;
+  #img_logo{
+      width: 70px;
+      top: 6px;
+      left: 98px;
   }
-  #divSpanBurger {
-    top: 4.4vh;
+  #divSpanBurger{
+      top: 5vh;
   }
-  #navbar {
-    left: 30%;
+  #navbar{
+      left: 50%;
+      transform: translateX(-50%);
   }
-}
+
 
 /* width téléphone 370 */
 .wrap {
