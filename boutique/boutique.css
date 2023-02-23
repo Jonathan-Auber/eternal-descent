@@ -391,6 +391,12 @@ td {
     border-radius: 0 15px 15px 0;
 }
 
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 /* Classe créer pour servir à javascript à appliquer un blur sur l'arrière-plan lors de l'affichage du panier */
 .blur {
     filter: blur(10px);

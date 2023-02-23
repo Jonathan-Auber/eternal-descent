@@ -67,7 +67,7 @@ function addToCartMugBlanc() {
     mugBlancTotalPrice.innerHTML = mugBlancTotal.innerHTML * 20;
     counter.innerHTML++;
     isDeleveryFree();
-
+    alert("Article ajouté au panier");
 }
 
 addMugBlanc.addEventListener("click", addToCartMugBlanc);
@@ -113,7 +113,7 @@ function addToCartMugNoir() {
     mugNoirTotalPrice.innerHTML = mugNoirTotal.innerHTML * 20;
     counter.innerHTML++;
     isDeleveryFree();
-
+    alert("Article ajouté au panier");
 }
 
 addMugNoir.addEventListener("click", addToCartMugNoir);
@@ -158,7 +158,7 @@ function addToCartTShirtBlanc() {
     tShirtBlancTotalPrice.innerHTML = tShirtBlancTotal.innerHTML * 35;
     counter.innerHTML++;
     isDeleveryFree();
-
+    alert("Article ajouté au panier");
 }
 
 addTShirtBlanc.addEventListener("click", addToCartTShirtBlanc);
@@ -202,7 +202,7 @@ function addToCartTShirtNoir() {
     tShirtNoirTotalPrice.innerHTML = tShirtNoirTotal.innerHTML * 35;
     counter.innerHTML++;
     isDeleveryFree();
-
+    alert("Article ajouté au panier");
 }
 
 addTShirtNoir.addEventListener("click", addToCartTShirtNoir);
@@ -251,7 +251,7 @@ function addToCartPoster() {
     posterTotalPrice.innerHTML = posterTotal.innerHTML * 60;
     counter.innerHTML++;
     isDeleveryFree();
-
+    alert("Article ajouté au panier");
 }
 
 addPoster.addEventListener("click", addToCartPoster);
@@ -296,7 +296,7 @@ function addToCartPeluche() {
     pelucheTotalPrice.innerHTML = pelucheTotal.innerHTML * 40;
     counter.innerHTML++;
     isDeleveryFree();
-
+    alert("Article ajouté au panier");
 }
 
 addPeluche.addEventListener("click", addToCartPeluche);
