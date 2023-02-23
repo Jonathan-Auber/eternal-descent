@@ -19,12 +19,12 @@ body::-webkit-scrollbar{
 
 @font-face {
     font-family: "NightmarePill";
-    src: url("../assets/fonts/NightmarePills-BV2w.ttf");
+    src: url("assets/fonts/NightmarePills-BV2w.ttf");
 }
 
 @font-face{
     font-family: "PoppinsReg";
-    src: url("../assets/fonts/Poppins-Regular.ttf");
+    src: url("assets/fonts/Poppins-Regular.ttf");
 }
 
 *{
