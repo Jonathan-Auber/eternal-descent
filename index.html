@@ -16,47 +16,53 @@
     <title>Accueil</title>
 </head>
 <body>
+      <!------- HEADER -------->
+    <!-- Nous allons disposer le titre du jeu à gauche et le menu (burger) à droite avec flexbox -->
+
     <header>
-    <div id="logo">
-        <h1>
-            Eternal Descent
-        </h1>
-        <img src="assets/img/Logo.png" alt="logo" id="img_logo">
-    </div>
 
-    <!-- Menu navigation -->
-
-    <div id="navbar">
-        <ul>
-            <li>
-                <a href="index.html">Accueil</a>
-            </li>
-            <li>
-                <a href="boutique/boutique.html">Boutique</a>
-            </li>
-            <li>
-                <a href="roulette/roulette.html">Concours</a>
-            </li>
-            <li>
-                <a href="contact/contact.html">Contact</a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="assets/icons/panier_64.png" alt="Panier">
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- La div qui englobe la span du menu burger -->
-
-    <div id="divSpanBurger">
-        <span class="spanBurger"></span>
-        <span class="spanBurger"></span>
-        <span class="spanBurger"></span>
-    </div>
-
-    </header>
+        <!-- Titre du jeu -->
+    
+        <div id="logo">
+            <h1>
+                Eternal Descent
+            </h1>
+            <img src="assets/img/Logo.png" alt="logo" id="img_logo">
+        </div>
+    
+        <!-- Menu navigation -->
+    
+        <div id="navbar">
+            <ul>
+                <li>
+                    <a href="../index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="../boutique/boutique.html">Boutique</a>
+                </li>
+                <li>
+                    <a href="roulette.html">Concours</a>
+                </li>
+                <li>
+                    <a href="../contact/contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icons/panier_64.png" alt="Panier">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- La div qui englobe la span du menu burger -->
+    
+        <div id="divSpanBurger">
+            <span class="spanBurger" id="topSpan"></span>
+            <span class="spanBurger" id="middleSpan"></span>
+            <span class="spanBurger" id="bottomSpan"></span>
+        </div>
+    
+        </header>
 
     <div id="jacquette">
     <img src="assets\img\Jaquette avec logo.png" id="arplan">
@@ -181,12 +187,28 @@
        <span id="team">© 2023 team BRJM </span>
     </footer>
     <script>
-        const menuHamburger = document.querySelector("#divSpanBurger")
-        const navLinks = document.querySelector("#navbar")
+       
+// MENU BURGER
+
+// On recupère le triple span qui sert de bouton
+const menuHamburger = document.querySelector("#divSpanBurger");
+// On récupère la navbar
+const navLinks = document.querySelector("#navbar");
+// On récupère les 3 spans du bouton pour pouvoir jouer avec, indépendement
+const topSpan = document.getElementById("topSpan");
+const middleSpan = document.getElementById("middleSpan");
+const bottomSpan = document.getElementById("bottomSpan");
  
-        menuHamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('mobile_menu')
-        });
+// On écoute le clic sur le bouton
+menuHamburger.addEventListener('click',()=>{
+        // on applique la classe qui fait pop la navbar
+        navLinks.classList.toggle('mobile_menu');
+        // on applique les classes qui modifie l'apparence du bouton
+        topSpan.classList.toggle('crossSpan1');
+        middleSpan.classList.toggle('deleteSpan');
+        bottomSpan.classList.toggle('crossSpan2')
+});
+
 
         let slides = document.querySelectorAll(".carousel-slide");
 let currentSlide = 0;
