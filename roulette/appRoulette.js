@@ -57,7 +57,7 @@ startAndStop.addEventListener('click', ()=>{
                 } else {
                         gift.innerHTML="un T-shirt Eternal Descent"
                 }
-                preGift.innerHTML="Vous avnez gagné:"
+                preGift.innerHTML="Vous avez gagné:"
                 gift.classList.add("gift_border")
         }
 } )
