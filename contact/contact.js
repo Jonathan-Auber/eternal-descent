@@ -36,7 +36,6 @@ function answerOn() {
         answerAccess.classList.remove("adOn")
         answerOnline.classList.remove("adOn")
         answerCoop.classList.remove("adOn")
-        select == ""
     }
     else if (select == "access") {
         answerAccess.classList.add("adOn")
@@ -63,7 +62,7 @@ function answerOn() {
         answerCoop.classList.remove("adOn")
     }
 }
-questionEl.addEventListener("click", answerOn)
+questionEl.addEventListener("change", answerOn)
 
 /* Au chargement de la page vérifier si il y a des questions en local storage et les affichers si elles existent, sinon créer un tableau vide */
 
