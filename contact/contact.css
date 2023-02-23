@@ -99,6 +99,18 @@ div#navbar.mobile_menu {
 #navbar ul li a {
   font-size: 1.5rem;
 }
+#navbar ul li a:hover {
+  font-weight: bold(200);
+  border: 10px solid transparent;
+  border-image-source: url("../assets/img/roulette/elden-ring-border-leaf-removebg-preview.png");
+  border-image-slice: 0 0 60 0;
+  border-image-width: 0px 0px 10px 0px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: repeat repeat;
+  padding: 2px 0;
+  transition: 0.4s;
+  text-shadow: 0 0 15px #44ff0041;
+}
 
 #navbar ul li a img {
   width: 30px;
