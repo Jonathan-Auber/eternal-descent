@@ -71,17 +71,24 @@ div#navbar {
   flex-direction: column;
   position: absolute;
   top: 25%;
-  left: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* left: 40%; */
   backdrop-filter: blur(15px);
   border-radius: 15px;
   margin-left: -100%;
   transition: 0.5s;
+  z-index: 100;
 }
 
 /* Je crée une classe qui permet d'afficher/masquer le menu burger */
 div#navbar.mobile_menu {
   margin-left: 0;
   transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding-top: 20vh;
 }
 
 #navbar ul {
@@ -99,6 +106,7 @@ div#navbar.mobile_menu {
 #navbar ul li a {
   font-size: 1.5rem;
 }
+
 #navbar ul li a:hover {
   font-weight: bold(200);
   border: 10px solid transparent;
