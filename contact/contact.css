@@ -258,11 +258,6 @@ div#navbar.mobile_menu {
   }
 }
 
-/* width téléphone 370 */
-.wrap {
-  width: 100vw;
-}
-
 /************************* Flex + réglage all main**********************************/
 
 main {
@@ -270,7 +265,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -293,7 +288,7 @@ p {
   gap: 20px;
 }
 .contact_map {
-  width: 100vw;
+  width: 100%;
   padding: 25px;
 }
 
