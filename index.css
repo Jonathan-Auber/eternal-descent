@@ -1,8 +1,7 @@
 *{
     margin :0;
     padding: 0; 
-    font-family: poppins,sans-serif;
-    
+    font-family: "poppins",sans-serif;
     list-style: none;
     color: aliceblue;
     box-sizing: border-box;
@@ -13,18 +12,13 @@ body::-webkit-scrollbar{
   }
 
 @font-face {
-    font-family: poppins;
-    src: url(/assets/fonts/Poppins-Regular.ttf);
+    font-family: "poppins";
+    src: url("/assets/fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
     font-family: "NightmarePill";
-    src: url("../assets/fonts/NightmarePills-BV2w.ttf");
-}
-
-@font-face{
-    font-family: "PoppinsReg";
-    src: url("../assets/fonts/Poppins-Regular.ttf");
+    src: url("/assets/fonts/NightmarePills-BV2w.ttf");
 }
 
 *{
@@ -34,7 +28,7 @@ body::-webkit-scrollbar{
     box-sizing: border-box;
     text-decoration: none;
     color: #C19D53;
-    font-family: "PoppinsReg";
+    font-family: "Poppins";
     font-size: 0.9rem;
 }
 
@@ -220,7 +214,7 @@ div#navbar.mobile_menu {
 /* MAIN */
 
 main{
-    background: url("../assets/img/main-background.jpg") fixed center/cover no-repeat;
+    background: url("/assets/img/main-background.jpg") fixed center/cover no-repeat;
     height: 100vh;
 }
 
