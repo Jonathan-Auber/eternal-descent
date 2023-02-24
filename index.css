@@ -41,13 +41,11 @@ body::-webkit-scrollbar {
 /* Je sépare le header en 2 parties, d'un côté le titre du jeu et de l'autre la navbar et je les dispose avec flexbox */
 
 header {
-  background: linear-gradient(
-    180deg,
-    #000000 0%,
-    #082b08 42.86%,
-    #082b08 59.43%,
-    #000000 100%
-  );
+  background: linear-gradient(180deg,
+      #000000 0%,
+      #082b08 42.86%,
+      #082b08 59.43%,
+      #000000 100%);
   /* mise en forme du padding et de la hauteur */
   height: 15vh;
   width: 100%;
@@ -90,6 +88,7 @@ div#navbar {
   left: 50%;
   transform: translateX(-50%);
   /* left: 40%; */
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   border-radius: 15px;
   margin-left: -100%;
@@ -262,14 +261,17 @@ div#navbar.mobile_menu {
     font-size: 2rem;
     word-spacing: 70px;
   }
+
   #img_logo {
     width: 70px;
     top: 6px;
     left: 98px;
   }
+
   #divSpanBurger {
     top: 5vh;
   }
+
   #navbar {
     left: 50%;
     transform: translateX(-50%);
@@ -279,8 +281,7 @@ div#navbar.mobile_menu {
 /* MAIN */
 
 main {
-  background: url("../assets/img/main-background.jpg") fixed center/cover
-    no-repeat;
+  background: url("../assets/img/main-background.jpg") fixed center/cover no-repeat;
   height: 100vh;
 }
 
@@ -310,12 +311,10 @@ footer {
   align-items: center;
   padding: 15px;
   width: 100%;
-  background: linear-gradient(
-    rgba(0, 0, 0, 1),
-    rgba(8, 43, 8, 1),
-    rgba(8, 43, 8, 1),
-    rgba(0, 0, 0, 1)
-  );
+  background: linear-gradient(rgba(0, 0, 0, 1),
+      rgba(8, 43, 8, 1),
+      rgba(8, 43, 8, 1),
+      rgba(0, 0, 0, 1));
   color: white;
 }
 
@@ -465,6 +464,7 @@ p {
   justify-content: center;
   position: relative;
 }
+
 .carousel-container {
   position: relative;
   overflow: hidden;
@@ -509,6 +509,7 @@ p {
     opacity: 0;
     transform: translateX(-100%);
   }
+
   to {
     opacity: 1;
     transform: translateX(0%);
@@ -550,6 +551,7 @@ p {
     width: 50%;
     aspect-ratio: 16/9;
   }
+
   p {
     width: 100%;
     margin-top: 0%;
@@ -568,6 +570,7 @@ p {
   #container span {
     font-size: 1.8rem;
   }
+
   #description1 {
     display: grid;
     grid-template-columns: repeat(2, 49%);
@@ -650,6 +653,7 @@ p {
     width: 40rem;
     height: 50rem;
   }
+
   #console {
     margin-top: 5%;
     width: 40%;
@@ -660,6 +664,7 @@ p {
     width: 100%;
     margin: 0 auto;
   }
+
   #jacquette {
     object-fit: contain;
     overflow: scroll;

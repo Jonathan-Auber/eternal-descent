@@ -594,6 +594,6 @@ footer a {
     }
 } */
 
-.hide > td:last-child {
+.hide>td:last-child {
     width: 100px;
 }
