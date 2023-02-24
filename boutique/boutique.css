@@ -13,11 +13,13 @@
     margin: 0;
     padding: 0;
     font-family: "poppins", sans-serif;
-    font-size: 0.9rem;
     list-style: none;
     text-decoration: none;
 }
 
+body {
+    font-size: 0.9rem;
+}
 /* Header Matthieu */
 
 /* Je sépare le header en 2 parties, d'un côté le titre du jeu et de l'autre la navbar et je les dispose avec flexbox */
@@ -53,7 +55,7 @@ h1 {
     width: 100px;
     position: absolute;
     top: 0;
-    left: 118px;
+    left: 130px;
 }
 
 
@@ -572,7 +574,7 @@ footer a {
     #img_logo {
         width: 70px;
         top: 6px;
-        left: 88px;
+        left: 98px;
     }
 
     #divSpanBurger {
